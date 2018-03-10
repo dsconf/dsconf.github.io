@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://shripad-agashe.github.io/DSConf/categories/</loc>
+    <loc>https://dsconf.in/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shripad-agashe.github.io/DSConf/</loc>
+    <loc>https://dsconf.in/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shripad-agashe.github.io/DSConf/tags/</loc>
+    <loc>https://dsconf.in/tags/</loc>
     <priority>0</priority>
   </url>
   
