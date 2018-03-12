@@ -152,6 +152,8 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
+  height: 120px;
+  width: 100px;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -875,6 +877,12 @@ nav {
   background-color:#2b2b2b;
   min-height: 100px;
   color: #e7e7e7;
+}
+.footer a i {
+  color: beige;
+}
+.footer a :hover{
+  color:  #f0a303;
 }
 /* =============================================================================
    Media Queries
