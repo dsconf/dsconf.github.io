@@ -152,8 +152,8 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
-  height: 120px;
-  width: 100px;
+  height: 100%; /*akshat*/
+  width: 100%; /*akshat*/
 }
 svg:not(:root) {
   overflow: hidden;
@@ -342,6 +342,11 @@ nav {
   margin-bottom: 0;
   font-size: 10em;
   letter-spacing: -0.04em;
+}
+
+.logo-img{
+  width: 200px !important;  /*akshat*/
+
 }
 .tagline {
   margin-bottom: 50px;
@@ -703,7 +708,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #2b2b2b;
+  color: #2b2b2b; /*akshat*/
 }
 /* =============================================================================
    NAVIGATION
@@ -725,7 +730,7 @@ nav {
    ========================================================================== */
 .header {
   background-image: url('../img/cover.jpg');
-  background-color: #2b2b2b;
+  background-color: #efefef; /*akshat */
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 100% auto;
@@ -733,9 +738,12 @@ nav {
 .logo-link,
 .tagline,
 .call-action-area .price {
-  color: #fff;
+  color: #2b2b2b; /*akshat*/
   text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
+
+
+
 .tagline {
   font-weight: normal;
 }
