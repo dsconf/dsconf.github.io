@@ -1,5 +1,9 @@
+
 html, body {
   overflow-x: hidden;
+}
+
+body { padding-top: 70px;
 }
 
 .navbar{
@@ -18,10 +22,11 @@ p{
 
 .header{
 	text-align: center;
-	padding: 150px;
+	padding: 100px;
 	background-color: #efefef;
 	color: #3E3E3E;
 }
+
 
 
 .speaker img{
@@ -130,10 +135,10 @@ a:hover{
 
 }
 
-.section{
+/*.section{
 	padding: 50px;
 	
-}
+}*/
 
 .sponsors img{
 	width: 300px;
@@ -165,3 +170,20 @@ background-color: #efefef;
 }
 
 
+@media screen and (max-width: 768px) {
+    .header{
+    	padding: 80px;
+    }
+
+
+
+    .header h1{
+        font-size:32px;
+    }
+
+    h2{
+    	font-size: 28px;
+    }
+
+
+}
