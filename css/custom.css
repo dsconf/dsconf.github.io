@@ -92,6 +92,7 @@ a:hover{
 
 .lineup{
 	text-align: center;
+	padding: 20px 0px;
 }
 
 .section-title{
@@ -102,11 +103,13 @@ a:hover{
 
 .about{
 	font-size: 1em;
+	padding: 20px
 }
 
 .sched{
 	text-align: left;
 	background-color: #efefef;
+	padding: 20px 0px;
 	
 }
 
@@ -132,6 +135,8 @@ a:hover{
 	max-width: 100%;
 	text-align: center;
 	background-color: #efefef;
+	padding-top: 20px;
+	padding-bottom: 20px;
 
 }
 
