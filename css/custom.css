@@ -1,6 +1,7 @@
 
 html, body {
   overflow-x: hidden;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 body { padding-top: 70px;
