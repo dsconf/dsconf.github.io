@@ -9,6 +9,9 @@ if(typeof SmoothScroll !== 'undefined') {
       }
     },
     updateURL: false,
+    easing: 'easeInOutCubic',
+    speed: 600,
+	  speedAsDuration: true
   });
 }
 
@@ -24,11 +27,22 @@ window.addEventListener('DOMContentLoaded', function() {
 })
 
 document.onclick = function(e) {
+  if(e.target.className === 'collapse') {
+    var parent = e.target.parentElement;
+    var textEl = parent.getElementsByClassName('section-schedule-item__right--text')[0];
+    var readMoreText = parent.getElementsByClassName('read-more')[0];
+    textEl.style.maxHeight = '70px';
+    e.target.style.display = 'none';
+    readMoreText.style.display = 'inline-block';
+  }
+
   // Expand schedule details
   if(e.target.className === 'read-more') {
     var trucTextEl = e.target.parentElement.getElementsByClassName('section-schedule-item__right--text')[0];
     trucTextEl.style.maxHeight = 'unset';
     e.target.style.display = 'none';
+    var collapseEl = e.target.parentElement.getElementsByClassName('collapse')[0];
+    collapseEl.style.display = 'inline-block';
   }
 
   // Handle navbar display on mobile
