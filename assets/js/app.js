@@ -1,5 +1,5 @@
 /* Smooth scroll. */
-if(typeof SmoothScroll !== 'undefined') {
+if (typeof SmoothScroll !== 'undefined') {
   var scroll = new SmoothScroll('a[href*="#"]', {
     offset: function(anchor, toggle) {
       if(anchor.id === 'sponsors') {
@@ -19,15 +19,15 @@ if(typeof SmoothScroll !== 'undefined') {
 window.addEventListener('DOMContentLoaded', function() {
   var truncTexts = document.getElementsByClassName('section-schedule-item__right--text');
   for (var i = 0; i < truncTexts.length; i++) {
-    if(truncTexts[i].clientHeight < 70) {
+    if (truncTexts[i].clientHeight < 70) {
       var el = truncTexts[i].parentElement.getElementsByClassName('read-more')[0];
       el.style.display = 'none';
     }
   }
-})
+});
 
 document.onclick = function(e) {
-  if(e.target.className === 'collapse') {
+  if (e.target.className === 'collapse') {
     var parent = e.target.parentElement;
     var textEl = parent.getElementsByClassName('section-schedule-item__right--text')[0];
     var readMoreText = parent.getElementsByClassName('read-more')[0];
@@ -37,7 +37,7 @@ document.onclick = function(e) {
   }
 
   // Expand schedule details
-  if(e.target.className === 'read-more') {
+  if (e.target.className === 'read-more') {
     var trucTextEl = e.target.parentElement.getElementsByClassName('section-schedule-item__right--text')[0];
     trucTextEl.style.maxHeight = 'unset';
     e.target.style.display = 'none';
@@ -46,12 +46,31 @@ document.onclick = function(e) {
   }
 
   // Handle navbar display on mobile
-  if(e.target.className === 'nav-menu-icon') {
+  if (e.target.className === 'nav-menu-icon') {
     document.getElementById('navbar-ul').style.display = 'block';
   }
 
-  if(e.target.parentElement.className === 'navbar-ul--first' || e.target.className === 'navbar-ul--first') {
+  if (e.target.parentElement.className === 'navbar-ul--first' || e.target.className === 'navbar-ul--first') {
     document.getElementById('navbar-ul').style.display = 'none';
+  }
+
+  /* Close bottom bar. */
+  if (e.target.className === 'sticky-signup-form--close' || e.target.parentElement.className === 'sticky-signup-form--close') {
+    var footer = document.getElementById('footer');
+    var elem = document.getElementById('mc_embed_signup');
+    var position = 0;
+    var intervals = setInterval(changePosition, 1);
+    function changePosition() {
+      if (position === 120) {
+        clearInterval(intervals);
+        elem.style.display = 'none';
+        footer.style.padding = '0px';
+      } else {
+        position += 5;
+        elem.style.transform = "translate(-50%, " + position + "px)";
+        elem.style.webkitTransform = "translate(-50%, " + position + "px)";
+      }
+    }
   }
 }
 
@@ -63,3 +82,12 @@ window.onscroll = function() {
     document.getElementById("navbar").classList.remove('navbar-shadow');
   }
 }
+
+// Hide bottom tab upon submission.
+var mcForm = document.getElementById('mc-embedded-subscribe-form');
+var mcFormEl = document.getElementById('mc_embed_signup');
+mcForm.addEventListener('submit', function(e) {
+  /* mcFormEl.style.display = 'none'; */
+  e.preventDefault();
+  console.log(e);
+});

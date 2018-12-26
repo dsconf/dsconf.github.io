@@ -698,16 +698,23 @@ nav ul li a:focus {
     display: none;
   }
 
+  .nav-anchor {
+    position: relative;
+  }
+
   .nav-menu-icon {
-    display: initial;
-    margin-right: 150px;
-    vertical-align: middle;
+    display: block;
     width: 30px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
   }
 
   .nav-mob-cta {
-    display: initial;
-    vertical-align: middle;
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 12px;
   }
 
   nav ul li {
@@ -736,12 +743,6 @@ nav ul li a:focus {
 
   main {
     padding-top: 71px;
-  }
-}
-
-@media (max-width: 380px) {
-  .nav-menu-icon {
-    margin-right: 80px;
   }
 }
 
@@ -1639,7 +1640,11 @@ footer {
   position: fixed;
   top: unset;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0px);
+  -moz-transform: translate(-50%, 0px);
+  -ms-transform: translate(-50%, 0px);
+  -o-transform: translate(-50%, 0px);
+  transform: translate(-50%, 0px);
   right: 0;
   bottom: 10px;
   min-width: 96vw;
@@ -1647,6 +1652,8 @@ footer {
   -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   z-index: 99999999;
 }
@@ -1724,6 +1731,24 @@ footer {
   text-align: left;
 }
 
+.sticky-signup-form--close {
+  position: absolute;
+  top: 17.5px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.sticky-signup-form--close img {
+  height: 22px;
+  width: 22px;
+  opacity: 0.7;
+}
+
+.sticky-signup-form--close img:hover,
+.sticky-signup-form--close img:focus {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 979px) {
   .sticky-signup-form-right {
     padding-bottom: 10px;
@@ -1748,6 +1773,31 @@ footer {
 
   footer {
     padding-bottom: 125px;
+  }
+
+  .sticky-signup-form-left {
+    padding: 0;
+  }
+
+  .sticky-signup-form-left p {
+    text-align: left;
+  }
+
+  .sticky-signup-form--close {
+    top: -10px;
+    right: -10px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  .sticky-signup-form--close img {
+    margin: 0;
+    vertical-align: bottom;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
   }
 }
 
