@@ -2,8 +2,10 @@
 if (typeof SmoothScroll !== 'undefined') {
   var scroll = new SmoothScroll('a[href*="#"]', {
     offset: function(anchor, toggle) {
-      if(anchor.id === 'sponsors') {
+      if (anchor.id === 'sponsors') {
         return 150;
+      } else if (anchor.id.startsWith("time-")) {
+        return 70;
       } else {
         return 30;
       }
@@ -11,7 +13,7 @@ if (typeof SmoothScroll !== 'undefined') {
     updateURL: false,
     easing: 'easeInOutCubic',
     speed: 600,
-	  speedAsDuration: true
+	  speedAsDuration: true,
   });
 }
 
@@ -56,20 +58,24 @@ document.onclick = function(e) {
 
   /* Close bottom bar. */
   if (e.target.className === 'sticky-signup-form--close' || e.target.parentElement.className === 'sticky-signup-form--close') {
-    var footer = document.getElementById('footer');
-    var elem = document.getElementById('mc_embed_signup');
-    var position = 0;
-    var intervals = setInterval(changePosition, 1);
-    function changePosition() {
-      if (position === 120) {
-        clearInterval(intervals);
-        elem.style.display = 'none';
-        footer.style.padding = '0px';
-      } else {
-        position += 5;
-        elem.style.transform = "translate(-50%, " + position + "px)";
-        elem.style.webkitTransform = "translate(-50%, " + position + "px)";
-      }
+    closeBottomBar();
+  }
+}
+
+function closeBottomBar() {
+  var footer = document.getElementById('footer');
+  var elem = document.getElementById('mc_embed_signup');
+  var position = 0;
+  var intervals = setInterval(changePosition, 1);
+  function changePosition() {
+    if (position === 120) {
+      clearInterval(intervals);
+      elem.style.display = 'none';
+      footer.style.padding = '0px';
+    } else {
+      position += 5;
+      elem.style.transform = "translate(-50%, " + position + "px)";
+      elem.style.webkitTransform = "translate(-50%, " + position + "px)";
     }
   }
 }
@@ -87,7 +93,5 @@ window.onscroll = function() {
 var mcForm = document.getElementById('mc-embedded-subscribe-form');
 var mcFormEl = document.getElementById('mc_embed_signup');
 mcForm.addEventListener('submit', function(e) {
-  /* mcFormEl.style.display = 'none'; */
-  e.preventDefault();
-  console.log(e);
+  closeBottomBar();
 });
