@@ -1179,6 +1179,22 @@ a.button-inverted {
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
 }
 
+.section-speakers__item:last-child {
+  margin-right: 51.5%;
+}
+
+@media only screen and (max-width: 979px) {
+  .section-speakers__item:last-child {
+    margin-right: 20px;
+  }
+
+  .section-speakers__item {
+    width: 100%;
+    max-width: unset;
+    min-width: 70%;
+  }
+}
+
 .section-speakers__item img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
