@@ -39,6 +39,17 @@
   <meta name="og:url" content="https://dsconf.in">
   <meta name="og:site_name" content="DSConf 2019">
   <meta name="og:type" content="website">
+
+  <!-- Twitter universal website tag code -->
+  <script>
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    // Insert Twitter Pixel ID and Standard Event data below
+    twq('init','o18c2');
+    twq('track','PageView');
+  </script>
+  <!-- End Twitter universal website tag code -->
 </head>
 
 <body>
@@ -57,16 +68,25 @@
             <img src="../assets/img/DSConf2019_logo.svg" alt="DSConf 2019 logo" width="180">
           </a>
           <h1>Thank you for purchasing the ticket to DSConf 2019</h1>
-          <p>Your ticket would have been sent to you as an email. In case of any query, please feel free to contact us on <a href="mailto:contact@dsconf.in">contact@dsconf.in</a>.</p>
+          <p>Your ticket would have been sent to you as an email.</p>
+          <p>Attending a conference is more than just the talks. It&apos;s also about meeting and interacting interesting people! Let your friends know that you&apos;re attending the DSConf:</p>
+          <a class="ctt" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2F127.0.0.1%3A5500%2Fthank-you%2F&ref_src=twsrc%5Etfw&text=Excited%20to%20be%20attending%20the%20%23dsconf19%20on%2016th%20Feb%20in%20%23Pune.%20If%20you%E2%80%99re%20around%2C%20we%20should%20definitely%20catch%20up!&tw_p=tweetbutton&url=https%3A%2F%2Fdsconf.in&via=dist_sys" onclick="ctt(event);">
+            <img src="../assets/img/twitter.svg" alt="twitter">Click to Tweet
+          </a>
           <br>
           <p class="ty-hero--look">We look forward to seeing you at the conference!</p>
         </div>
       </div>
     </section>
-
+    
   </main>
-
-
+  
+  <script>
+    function ctt(e) {
+      e.preventDefault();
+      window.open(e.target.href, '_blank', 'location=yes,height=570,width=720,scrollbars=yes,status=yes');
+    }
+  </script>
 </body>
 
 </html>

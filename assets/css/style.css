@@ -1459,7 +1459,7 @@ a.button-inverted {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #ff0000;
   margin-right: 10px;
 }
 
@@ -2124,6 +2124,12 @@ footer {
   flex: 1;
 }
 
+@media only screen and (max-width: 767px) {
+  .ty-hero__wrapper {
+    padding: 100px 5%;
+  }
+}
+
 .ty-hero h1 {
   line-height: 1.4;
 }
@@ -2140,4 +2146,30 @@ p.ty-hero--look {
 
 .ty-hero img {
   margin-bottom: 40px;
+}
+
+a.ctt {
+  font-size: 24px;
+  border: none;
+  background-color: #ff8308;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+a.ctt:hover,
+a.ctt:focus {
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 5px 8px 0 rgba(0, 0, 0, .14), 0 1px 14px 0 rgba(0, 0, 0, .12);
+}
+
+a.ctt img {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  margin-right: 10px;
+  vertical-align: text-bottom;
 }
