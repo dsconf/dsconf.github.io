@@ -1,0 +1,152 @@
+// Large devices (desktops, less than 1200px)
+@media (min-width: 1600px) {
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  
+  .main-top-navbar{
+    .navbar-nav{
+      
+      .nav-item{
+        margin-right: 2rem;
+      }
+      .nav-link{
+      }
+    }
+  }
+  
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  body{
+    font-size: 1rem;
+  }
+
+  .section{
+    padding: 4rem 0;
+
+    &--main-header{
+      padding-top: 7rem;
+      background: url(../img/bg-mobile.jpg) no-repeat $bg-color-purple;
+      background-size: cover;
+      // padding-bottom: 6rem;
+    }
+  }
+
+  .top-header-nav-wrap{
+    .container{
+      padding: 0px;
+    }
+  }
+
+  .main-top-navbar{
+    .navbar-brand{
+      img{
+        max-width: 160px;
+      }
+    }
+
+    .navbar-toggler{
+      color: $text-color-orange;
+      border: 0px;
+    }
+
+    .navbar-nav{
+      background: $bg-color-purple;
+      padding: 0 1rem;
+
+      .nav-item{
+        margin-right: 0px;
+
+        .dropdown-menu{
+          z-index: 10000;
+          position: relative;
+          margin-bottom: .5rem;
+        }
+
+        &:last-of-type{
+          margin-right: 0px;
+        }
+      }
+      .nav-link{
+        border-bottom: 0px ;
+      }
+    }
+  }
+
+  .header-main-content{
+    flex-wrap: wrap;
+    padding-top: 2rem;
+
+    &__img-wrap{
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    &__info{
+      width: 100%;
+    }
+
+    &__main-heading{
+      font-size: 3rem;
+      
+      .sup-heading{
+        font-size: 1.2rem;
+      }
+    }
+
+    &__sub-heading{
+      font-size: 1.3rem;
+      // margin-bottom: 1rem;
+    }
+
+    &__main-desc{
+      margin-bottom: 1rem;
+    }
+
+    &__btn-wrap{
+      flex-wrap: wrap;
+      
+      .btn--cfp-open{
+        font-size: 1.25rem;
+        padding: .5rem 2rem;
+      }
+
+      &:before{
+        left: auto;
+        right: 0;
+        width: 40%;
+        top: 20px;
+        transform: translate(0,0);
+      }
+
+      .tickets-info{
+        width: 100%;
+        margin-top: 3rem;
+      }
+    }
+  }
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+
+  .header-main-content{
+    &__btn-wrap{
+      &:before{
+        width: 100px;
+      }
+
+    }
+  }
+ 
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+
+}
