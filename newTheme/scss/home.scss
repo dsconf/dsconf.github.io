@@ -126,3 +126,178 @@
     }
   }
 }
+
+.past-events{
+  &__heading{
+    color: #fff;
+    padding-top: 2rem;
+  }
+}
+
+.speaker-info-list{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item{
+    width: 30%;
+    position: relative;
+
+    &:before{
+      position: absolute;
+      content: ' ';
+      top: 110px;
+      left: 0;
+      width: .25rem;
+      height: calc(100% - 110px);
+      background: $text-color-orange;
+    }
+  }
+
+  &__author-info{
+    display: flex;
+    margin-bottom: 1rem;
+
+    img{
+      max-width: 90px;
+      height: 90px;
+      border-radius: 90px;
+      margin-right: 1rem;
+    }
+
+    .social{
+      display: flex;
+      align-items: center;
+      padding: 0px;
+      margin: 0px;
+
+      li{
+        display: inline-block;
+        color: $text-color-purple;
+        margin-right: 1rem;
+
+        a{
+          color: inherit;
+        }
+        i{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__author-bio{
+    padding-left: 1.5rem;
+
+    .name{
+      font-size: 2rem;
+      color: $text-color-purple;
+      font-weight: 500;
+    }
+  }
+}
+
+.schedule-date-list{
+  border: 0px;
+  margin-bottom: 2rem;
+
+  .nav-link{
+    color: $text-color-orange;
+    border: 0px;
+    border-top: .25rem solid $text-color-orange;
+    margin-right: 2rem;
+    border-radius: 0px;
+    padding: .5rem 0px;
+
+    &.active{
+      background: transparent;
+      color: #fff;
+      border-color: .25rem solid #fff;
+    }
+
+    .day{
+      font-weight: 500;
+    }
+  }
+}
+
+.schedule-talk-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
+
+  &__item{
+    width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  &__brief{
+    padding: 2rem;
+    min-width: 20%;
+
+    img{
+      border-radius: 100%;
+    }
+
+    .time{
+      font-size: 2rem;
+      font-weight: 500;
+      color: $text-color-orange;
+    }
+
+    .author{
+      color: $text-color-purple;
+      font-weight: 500;
+    }
+  }
+
+  &__info{
+    padding: 2rem;
+    border-left: .25rem solid $text-color-orange;
+  }
+
+  &__heading{
+    font-size: 1.75rem;
+    color: $text-color-purple;
+    font-weight: 500;
+  }
+
+  .btn-wrap{
+    a{
+      color: $text-color-orange;
+      font-weight: 500;
+
+      i{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.sponsors-list{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  flex-wrap: wrap;
+
+  &__item{
+    display: block;
+    width: 33%;
+    margin-bottom: 2rem;
+
+    img{
+      margin-bottom: 1rem;
+    }
+
+    .sponsor-name{
+      font-size: 1.75rem;
+      font-weight: normal;
+      color: $text-color-purple;
+    }
+  }
+}

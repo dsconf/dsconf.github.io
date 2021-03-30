@@ -34,6 +34,10 @@
       background-size: cover;
       // padding-bottom: 6rem;
     }
+
+    &__heading{
+      font-size: 2rem;
+    }
   }
 
   .top-header-nav-wrap{
@@ -126,6 +130,76 @@
       .tickets-info{
         width: 100%;
         margin-top: 3rem;
+      }
+    }
+  }
+
+  .past-events{
+
+    &__item{
+      margin-bottom: 1rem;
+      &:last-of-type{
+        margin-bottom: 0px;
+      }
+
+    }
+
+    &__heading{
+      padding-top: 1rem;
+    }
+  }
+
+  .speaker-info-list{
+
+    &__item{
+      width: 100%;
+      margin-bottom: 2rem;
+
+      &:last-of-type{
+        margin-bottom: 0px;
+      }
+    }
+
+    &__author-bio{
+      .name{
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .schedule-talk-list{
+    &__item{
+      flex-wrap: wrap;
+
+    }
+
+    &__brief{
+      width: 100%;
+      padding: 1rem;
+    }
+
+    &__info{
+      border-left: 0px;
+      border-top: 2px solid $text-color-orange;
+      padding: 1rem;
+    }
+
+    &__heading{
+      font-size: 1.25rem;
+    }
+  }
+
+  .sponsors-list{
+    &__item{
+      width: 100%;
+      margin-bottom: 1rem;
+
+      &:last-of-type{
+        margin-bottom: 0px;
+      }
+      
+      .sponsor-name{
+        font-size: 1.25rem;
       }
     }
   }

@@ -58,10 +58,14 @@
   &__heading{
     font-size: 3.5rem;
     font-weight: 600;
-    text-align: center;
+    // text-align: center;
     margin: auto;
     margin-bottom: 2rem;
-    max-width: 80%;
+    // max-width: 80%;
+
+    &--lg{
+      font-size: 4.5rem;
+    }
 
     &--sm{
       font-size: 2rem;
@@ -79,6 +83,14 @@
     &--pad-lg{
       padding: 3rem 0;
     }
+
+    &--white{
+      color: #fff;
+    }
+
+    &--orange{
+      color: $text-color-orange;
+    }
   }
 
   &--main-header{
@@ -87,6 +99,10 @@
 
   &--purple{
     background: $bg-color-purple;
+  }
+
+  &--orange{
+    background: transparent linear-gradient(112deg, #F25424 0%, #F47F22 100%) 0% 0% no-repeat padding-box;
   }
 
   &--main-header{
