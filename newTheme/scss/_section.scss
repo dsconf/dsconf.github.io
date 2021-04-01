@@ -91,6 +91,10 @@
     &--orange{
       color: $text-color-orange;
     }
+
+    &--purple{
+      color: $text-color-purple-2;
+    }
   }
 
   &--main-header{
@@ -99,6 +103,10 @@
 
   &--purple{
     background: $bg-color-purple;
+  }
+
+  &--purple-2{
+    background: $bg-color-purple-2;
   }
 
   &--orange{

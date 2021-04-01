@@ -156,10 +156,14 @@ h1, h2, h3, h4, h5 {
       color: #fff; }
     .section__heading--orange {
       color: #F48222; }
+    .section__heading--purple {
+      color: #4F0440; }
   .section--main-header {
     padding: 40px 0; }
   .section--purple {
     background: #4F0040; }
+  .section--purple-2 {
+    background: #DDD4D1; }
   .section--orange {
     background: transparent linear-gradient(112deg, #F25424 0%, #F47F22 100%) 0% 0% no-repeat padding-box; }
   .section--main-header {
@@ -269,8 +273,10 @@ h1, h2, h3, h4, h5 {
       transform: translate(-50%, -50%); }
 
 .past-events__heading {
-  color: #fff;
-  padding-top: 2rem; }
+  color: #4F0440;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  text-align: center; }
 
 .speaker-info-list {
   display: flex;
