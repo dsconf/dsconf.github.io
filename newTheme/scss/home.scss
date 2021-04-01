@@ -129,8 +129,10 @@
 
 .past-events{
   &__heading{
-    color: #fff;
+    color: $text-color-purple-2;
     padding-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
 
